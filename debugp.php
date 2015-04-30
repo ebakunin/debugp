@@ -14,10 +14,10 @@
 if (!function_exists('debugp')) {
 	function debugp($content = array(), $stop = true, $format = true) {
 		$backtrace = current(debug_backtrace());
-		echo $backtrace['file'], ', line ', $backtrace['line'], '<br />';
+		echo '<pre>', $backtrace['file'], ', line ', $backtrace['line'], ':</pre>';
 		
 		if ($format) {
-			var_dump($content); 
+            var_dump($content);
 		} else {
 			echo "<pre>\n";
 			print_r($content);
